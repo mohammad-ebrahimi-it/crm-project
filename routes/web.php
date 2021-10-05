@@ -19,4 +19,8 @@ Route::get('/', function () {
 
 Auth::routes();
 
+Route::get('/vue', function (){
+    return view('test');
+});
+
 Route::get('/home', 'HomeController@index')->name('home');
