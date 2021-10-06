@@ -2,12 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bbb91e65-7e31-480d-80bb-01f885b68c34" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/mix-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/mix-manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/vue-template.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/vue-template.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Customers.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Customers.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Employees.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Employees.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_100000_create_password_resets_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_08_19_000000_create_failed_jobs_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_10_06_200605_create_employees_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_10_06_200605_create_employees_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_10_06_200654_create_customers_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_10_06_200654_create_customers_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_10_06_200752_create_prospects_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_10_06_200752_create_prospects_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_10_06_200856_create_prospect_employees_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_10_06_200856_create_prospect_employees_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_10_06_200918_create_customer_employees_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_10_06_200918_create_customer_employees_table.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

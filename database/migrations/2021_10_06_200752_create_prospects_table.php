@@ -15,7 +15,11 @@ class CreateProspectsTable extends Migration
     {
         Schema::create('prospects', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+            $table->string('name');
+            $table->integer('address_number');
+            $table->string('address_street');
+            $table->integer('phone_number');
+            $table->foreign('customer_id')->references('customer_id')->on('customers');
         });
     }
 

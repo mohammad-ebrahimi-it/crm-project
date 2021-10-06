@@ -14,8 +14,9 @@ class CreateProspectEmployeesTable extends Migration
     public function up()
     {
         Schema::create('prospect_employees', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+            $table->foreign('prospect_id')->references('prospect_id')->on('prospect');
+            $table->foreign('employee_id')->references('employee_id')->on('employees');
+
         });
     }
 
