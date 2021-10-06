@@ -1,7 +1,11 @@
-let Home = require('./components/Home.vue').default;
-let About = require('./components/About.vue').default;
+let Index = require('./components/Index.vue').default;
+let Employee = require('./components/Employee.vue').default;
+let Customer = require('./components/Customers.vue').default;
+let Prospects = require('./components/Prospects.vue').default;
 
 export const routes = [
-    { path: '/home', component: Home },
-    { path: '/about', component: About }
+    { path: '/', component: Index },
+    { path: '/employee', component: Employee },
+    { path: '/customer', component: Customer },
+    { path: '/prospect', component: Prospects }
 ]
