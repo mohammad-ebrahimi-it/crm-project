@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bbb91e65-7e31-480d-80bb-01f885b68c34" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_10_06_200752_create_prospects_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_10_06_200752_create_prospects_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_10_06_200856_create_prospect_employees_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_10_06_200856_create_prospect_employees_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_10_06_200918_create_customer_employees_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_10_06_200918_create_customer_employees_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
