@@ -14,8 +14,9 @@ class CreateCustomerEmployeesTable extends Migration
     public function up()
     {
         Schema::create('customer_employees', function (Blueprint $table) {
-            $table->foreign('customer_id')->references('customer_id')->on('customers');
-            $table->foreign('employee_id')->references('employee_id')->on('employees');
+
+            $table->foreignId('customer_id')->references('customer_id')->on('customers');
+            $table->foreignId('employee_id')->references('employee_id')->on('employees');
         });
     }
 

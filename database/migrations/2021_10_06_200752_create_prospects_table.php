@@ -13,13 +13,14 @@ class CreateProspectsTable extends Migration
      */
     public function up()
     {
+        Schema::dropIfExists('prospects');
         Schema::create('prospects', function (Blueprint $table) {
-            $table->id();
+            $table->id('prospect_id');
             $table->string('name');
             $table->integer('address_number');
             $table->string('address_street');
             $table->integer('phone_number');
-            $table->foreign('customer_id')->references('customer_id')->on('customers');
+            $table->foreignId('customer_id')->references('customer_id')->on('customers')->onDelete('cascade');
         });
     }
 

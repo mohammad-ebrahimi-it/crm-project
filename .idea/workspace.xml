@@ -3,12 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="bbb91e65-7e31-480d-80bb-01f885b68c34" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Customers.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Customers.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Employees.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Employees.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_100000_create_password_resets_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_08_19_000000_create_failed_jobs_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_10_06_200605_create_employees_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_10_06_200605_create_employees_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_10_06_200654_create_customers_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_10_06_200654_create_customers_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/migrations/2021_10_06_200752_create_prospects_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_10_06_200752_create_prospects_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/migrations/2021_10_06_200856_create_prospect_employees_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_10_06_200856_create_prospect_employees_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/migrations/2021_10_06_200918_create_customer_employees_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_10_06_200918_create_customer_employees_table.php" afterDir="false" />
@@ -19,6 +13,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="ComposerSettings">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
   </component>
   <component name="Git.Settings">
@@ -179,6 +174,7 @@
       <option name="presentableId" value="Default" />
       <updated>1633451369999</updated>
       <workItem from="1633451371577" duration="877000" />
+      <workItem from="1633612389368" duration="5267000" />
     </task>
     <servers />
   </component>
@@ -195,5 +191,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>
