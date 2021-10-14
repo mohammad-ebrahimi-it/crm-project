@@ -22,5 +22,6 @@ Auth::routes();
 Route::get('/vue', function (){
     return view('test');
 });
-
+Route::get('customer/store', 'CustomerController@store')->name('store');
+Route::post('customer/store', 'CustomerController@store');
 Route::get('/home', 'HomeController@index')->name('home');
