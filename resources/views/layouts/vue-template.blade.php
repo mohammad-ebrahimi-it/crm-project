@@ -8,9 +8,11 @@
     <meta name="author" content="">
     <link href="{{asset('tem/img/logo/logo.png')}}" rel="icon">
     <title>RuangAdmin - Dashboard</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link href="{{asset('tem/vendor/fontawesome-free/css/all.min.css')}}" rel="stylesheet" type="text/css">
     <link href="{{asset('tem/vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet" type="text/css">
     <link href="{{asset('tem/css/ruang-admin.min.css')}}" rel="stylesheet">
+
 
 
 
@@ -56,66 +58,7 @@
                     </div>
                 </div>
             </li>
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseForm"
-                   aria-expanded="true" aria-controls="collapseForm">
-                    <i class="fab fa-fw fa-wpforms"></i>
-                    <span>Forms</span>
-                </a>
-                <div id="collapseForm" class="collapse" aria-labelledby="headingForm" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Forms</h6>
-                        <a class="collapse-item" href="form_basics.html">Form Basics</a>
-                        <a class="collapse-item" href="form_advanceds.html">Form Advanceds</a>
-                    </div>
-                </div>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTable"
-                   aria-expanded="true" aria-controls="collapseTable">
-                    <i class="fas fa-fw fa-table"></i>
-                    <span>Tables</span>
-                </a>
-                <div id="collapseTable" class="collapse" aria-labelledby="headingTable" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Tables</h6>
-                        <a class="collapse-item" href="simple-tables.html">Simple Tables</a>
-                        <a class="collapse-item" href="datatables.html">DataTables</a>
-                    </div>
-                </div>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="ui-colors.html">
-                    <i class="fas fa-fw fa-palette"></i>
-                    <span>UI Colors</span>
-                </a>
-            </li>
-            <hr class="sidebar-divider">
-            <div class="sidebar-heading">
-                Examples
-            </div>
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePage"
-                   aria-expanded="true" aria-controls="collapsePage">
-                    <i class="fas fa-fw fa-columns"></i>
-                    <span>Pages</span>
-                </a>
-                <div id="collapsePage" class="collapse" aria-labelledby="headingPage" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Example Pages</h6>
-                        <a class="collapse-item" href="login.html">Login</a>
-                        <a class="collapse-item" href="register.html">Register</a>
-                        <a class="collapse-item" href="404.html">404 Page</a>
-                        <a class="collapse-item" href="blank.html">Blank Page</a>
-                    </div>
-                </div>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="charts.html">
-                    <i class="fas fa-fw fa-chart-area"></i>
-                    <span>Charts</span>
-                </a>
-            </li>
+
             <hr class="sidebar-divider">
             <div class="version" id="version-ruangadmin">Version 1.1</div>
         </ul>
@@ -123,10 +66,11 @@
         <div id="content-wrapper" class="d-flex flex-column">
             <div id="content">
                 <!-- TopBar -->
-                <nav class="navbar navbar-expand navbar-light bg-navbar topbar mb-4 static-top">
+                <nav class="navbar navbar-expand navbar-light bg-navbar topbar mb-4 static-top" >
                     <button id="sidebarToggleTop" class="btn btn-link rounded-circle mr-3">
                         <i class="fa fa-bars"></i>
                     </button>
+
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
@@ -326,7 +270,7 @@
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-            <span>copyright © <script> document.write(new Date().getFullYear()); </script>2021 - developed by
+            <span>copyright © 2021 - developed by
               <b><a href="https://indrijunanda.gitlab.io/" target="_blank">indrijunanda</a></b>
             </span>
                     </div>
@@ -339,12 +283,14 @@
 
 </div>
 
-<script src="{{asset('tem/vendor/jquery/jquery.min.js')}}"></script>
-<script src="{{asset('tem/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
-<script src="{{asset('tem/vendor/jquery-easing/jquery.easing.min.js')}}"></script>
-<script src="{{asset('tem/js/ruang-admin.min.js')}}"></script>
-<script src="{{asset('tem/vendor/chart.js/Chart.min.js')}}"></script>
-<script src="{{asset('tem/js/demo/chart-area-demo.js')}}"></script>
+{{--<script src="{{asset('tem/vendor/jquery/jquery.min.js')}}"></script>--}}
+{{--<script src="{{asset('tem/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>--}}
+{{--<script src="{{asset('tem/vendor/jquery-easing/jquery.easing.min.js')}}"></script>--}}
+{{--<script src="{{asset('tem/js/ruang-admin.min.js')}}"></script>--}}
+{{--<script src="{{asset('tem/vendor/chart.js/Chart.min.js')}}"></script>--}}
+{{--<script src="{{asset('tem/js/demo/chart-area-demo.js')}}"></script>--}}
 <script src="{{asset('js/app.js')}}"></script>
+
+
 </body>
 </html>

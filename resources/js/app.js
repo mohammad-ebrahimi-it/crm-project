@@ -4,6 +4,8 @@
  * building robust, powerful web applications using Vue and Laravel.
  */
 
+require('./bootstrap');
+
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import {routes} from "./router.js";
