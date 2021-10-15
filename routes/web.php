@@ -24,4 +24,5 @@ Route::get('/vue', function (){
 });
 Route::get('customer/store', 'CustomerController@store')->name('store');
 Route::post('customer/store', 'CustomerController@store');
+Route::post('employee/store', 'EmployeeController@store');
 Route::get('/home', 'HomeController@index')->name('home');

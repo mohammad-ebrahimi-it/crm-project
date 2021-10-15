@@ -58,15 +58,6 @@
                             </ul>
                         </div>
 
-                        <div class="form-group">
-                            <label for="employee_id">Select Employees</label>
-                            <select multiple="" class="form-control" id="employee_id"
-                                    name="employee_id">
-                                <option value="">1</option>
-
-                            </select>
-                        </div>
-
 
                     </div>
                     <div class="modal-footer">

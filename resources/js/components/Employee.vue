@@ -20,60 +20,72 @@
                         <table class="table align-items-center table-flush">
                             <thead class="thead-light">
                             <tr>
-                                <th>Order ID</th>
-                                <th>Customer</th>
-                                <th>Item</th>
-                                <th>Status</th>
-                                <th>Action</th>
+                                <th> ID</th>
+                                <th>Name</th>
+                                <th>Phone Number</th>
+                                <th>Department</th>
+
                             </tr>
                             </thead>
                             <tbody>
-                            <tr>
-                                <td><a href="#">RA0449</a></td>
-                                <td>Udin Wayang</td>
-                                <td>Nasi Padang</td>
-                                <td><span class="badge badge-success">Delivered</span></td>
-                                <td><a href="#" class="btn btn-sm btn-primary">Detail</a></td>
+                            <tr v-for="employee of employees" :key="employee.employee_id">
+                                <td><a href="#">{{ employee.employee_id }}</a></td>
+                                <td>{{ employee.name }}</td>
+                                <td>{{ employee.phone_number }}</td>
+                                <td>
+                                    <span
+                                        class="badge badge-primary"
+                                        v-if="employee.department === 'Organizational strategy'">
+                                        {{ employee.department }}</span>
+
+                                    <span class="badge badge-success"
+                                          v-if="employee.department === 'human resources'"
+                                    >{{ employee.department }}</span>
+
+
+                                    <span class="badge badge-warning"
+                                          v-if="employee.department ==='Management systems'">{{
+                                            employee.department
+                                        }}</span>
+
+
+                                    <span class="badge badge-light" v-if="employee.department ==='Policy making'"
+                                    >{{ employee.department }}</span>
+
+
+                                    <span class="badge badge-info"
+                                          v-if="employee.department ==='organizational behavior'"
+                                    >{{ employee.department }}</span>
+
+
+                                    <span class="badge badge-danger"
+                                          v-if="employee.department ==='Organizational Structure'"
+                                    >{{ employee.department }}</span>
+
+
+                                </td>
                             </tr>
-                            <tr>
-                                <td><a href="#">RA5324</a></td>
-                                <td>Jaenab Bajigur</td>
-                                <td>Gundam 90' Edition</td>
-                                <td><span class="badge badge-warning">Shipping</span></td>
-                                <td><a href="#" class="btn btn-sm btn-primary">Detail</a></td>
-                            </tr>
-                            <tr>
-                                <td><a href="#">RA8568</a></td>
-                                <td>Rivat Mahesa</td>
-                                <td>Oblong T-Shirt</td>
-                                <td><span class="badge badge-danger">Pending</span></td>
-                                <td><a href="#" class="btn btn-sm btn-primary">Detail</a></td>
-                            </tr>
-                            <tr>
-                                <td><a href="#">RA1453</a></td>
-                                <td>Indri Junanda</td>
-                                <td>Hat Rounded</td>
-                                <td><span class="badge badge-info">Processing</span></td>
-                                <td><a href="#" class="btn btn-sm btn-primary">Detail</a></td>
-                            </tr>
-                            <tr>
-                                <td><a href="#">RA1998</a></td>
-                                <td>Udin Cilok</td>
-                                <td>Baby Powder</td>
-                                <td><span class="badge badge-success">Delivered</span></td>
-                                <td><a href="#" class="btn btn-sm btn-primary">Detail</a></td>
-                            </tr>
+
                             </tbody>
                         </table>
                     </div>
-                    <div class="card-footer"></div>
+
+                    <div class="card-footer">
+                        <button type="button" class="btn btn-primary" data-toggle="modal"
+                                data-target="#exampleModal">
+                            Add +
+                        </button>
+                        <addEmployee @insertData="reloadPage"></addEmployee>
+                    </div>
                 </div>
+
             </div>
         </div>
         <!--Row-->
 
         <!-- Modal Logout -->
-        <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabelLogout" aria-hidden="true">
+        <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabelLogout"
+             aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -96,7 +108,32 @@
     </div>
 </template>
 <script>
+import addEmployee from "./addEmployee";
+
 export default {
+    components: {addEmployee},
+    data() {
+        return {
+            employees: null,
+        }
+    },
+    created() {
+        axios.get('http://localhost/crm-project/public/api/get/employees')
+            .then((response) => {
+                this.employees = response.data
+            })
+            .catch((error) => {
+                console.log(error);
+            })
+    },
+    methods: {
+        reloadPage() {
+            window.location.reload();
+        },
+        clear() {
+            this.className = ''
+        }
+    }
 
 }
 </script>

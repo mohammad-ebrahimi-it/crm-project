@@ -8,8 +8,10 @@ require('./bootstrap');
 
 import Vue from 'vue'
 import VueRouter from 'vue-router'
+import VSwitch from 'v-switch-case'
 import {routes} from "./router.js";
 Vue.use(VueRouter)
+Vue.use(VSwitch)
 
 /**
  * The following block of code may be used to automatically register your

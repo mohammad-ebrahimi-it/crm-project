@@ -84,9 +84,6 @@
                 </div>
             </div>
 
-            <!-- Button trigger modal -->
-
-
             <!-- Modal -->
             <div id="model">
                 <AddCustomer @insertData="refreshCustomer"></AddCustomer>
@@ -97,7 +94,6 @@
 </template>
 <script>
 import AddCustomer from "./AddCustomer";
-// Vue.component('AddCustomer', require('./AddCustomer').default);
 export default {
     components: {AddCustomer},
     data () {
