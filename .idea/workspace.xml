@@ -2,44 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bbb91e65-7e31-480d-80bb-01f885b68c34" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/js/components/AddCustomer.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at________Default_Changelist_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_۰۶_۱۰_۲۰۲۱_۱۰_۰۶_بعدازظهر_[Default_Changelist]/shelved.patch" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Customers.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Customers.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CustomerController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CustomerController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/tem/css/ruang-admin.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/tem/css/ruang-admin.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/tem/css/ruang-admin.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/tem/css/ruang-admin.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/tem/scss/_buttons.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/scss/_buttons.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/tem/scss/_cards.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/scss/_cards.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/tem/scss/_charts.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/scss/_charts.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/tem/scss/_dropdowns.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/scss/_dropdowns.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/tem/scss/_error.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/scss/_error.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/tem/scss/_footer.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/scss/_footer.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/tem/scss/_global.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/scss/_global.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/tem/scss/_login.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/scss/_login.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/tem/scss/_mixins.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/scss/_mixins.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/tem/scss/_navs.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/scss/_navs.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/tem/scss/_utilities.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/scss/_utilities.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/tem/scss/_variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/scss/_variables.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/tem/scss/navs/_global.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/scss/navs/_global.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/tem/scss/navs/_sidebar.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/scss/navs/_sidebar.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/tem/scss/navs/_topbar.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/scss/navs/_topbar.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/tem/scss/sb-admin-2.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/scss/sb-admin-2.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/tem/scss/utilities/_animation.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/scss/utilities/_animation.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/tem/scss/utilities/_background.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/scss/utilities/_background.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/tem/scss/utilities/_border.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/scss/utilities/_border.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/tem/scss/utilities/_display.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/scss/utilities/_display.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/tem/scss/utilities/_progress.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/scss/utilities/_progress.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/tem/scss/utilities/_rotate.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/scss/utilities/_rotate.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/tem/scss/utilities/_text.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/scss/utilities/_text.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/bootstrap.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/AddCustomer.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/AddCustomer.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/components/Customers.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Customers.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/Prospects.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Prospects.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/vue-template.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/vue-template.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -222,6 +190,7 @@
       <workItem from="1634104823807" duration="15595000" />
       <workItem from="1634152168804" duration="8568000" />
       <workItem from="1634191166382" duration="9554000" />
+      <workItem from="1634277687692" duration="5141000" />
     </task>
     <servers />
   </component>

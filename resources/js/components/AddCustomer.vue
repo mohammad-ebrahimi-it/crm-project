@@ -14,19 +14,19 @@
                     <div class="modal-body">
                         <p class="alert alert-success" v-if="success.length>0">{{ success }}</p>
                         <div class="form-group">
-                            <label for="exampleFormControlInput1">Name</label>
-                            <input type="text" class="form-control" id="exampleFormControlInput1"
+                            <label for="first_name">Name</label>
+                            <input type="text" class="form-control" id="name"
                                    placeholder="Example: ali"
-                                   name="first_name"
-                                   v-model="first_name"
+                                   name="name"
+                                   v-model="name"
                             >
                             <ul v-if="error" class="list-unstyled">
                                 <li v-for="err of error" class="alert alert-danger">{{ err }}</li>
                             </ul>
                         </div>
                         <div class="form-group">
-                            <label for="exampleFormControlInput1"> Address Number</label>
-                            <input type="text" class="form-control" id="exampleFormControlInput1"
+                            <label for="address_number"> Address Number</label>
+                            <input type="text" class="form-control" id="address_number"
                                    placeholder="Example: 123"
                                    name="address_number"
                                    v-model="address_number"
@@ -36,8 +36,8 @@
                             </ul>
                         </div>
                         <div class="form-group">
-                            <label for="exampleFormControlInput1">Address Street</label>
-                            <input type="text" class="form-control" id="exampleFormControlInput1"
+                            <label for="address_street">Address Street</label>
+                            <input type="text" class="form-control" id="address_street"
                                    placeholder="Example: iran, isfahan, ..."
                                    name="address_street"
                                    v-model="address_street"
@@ -47,8 +47,8 @@
                             </ul>
                         </div>
                         <div class="form-group">
-                            <label for="exampleFormControlInput1">Phone Number</label>
-                            <input type="text" class="form-control" id="exampleFormControlInput1"
+                            <label for="phone_number">Phone Number</label>
+                            <input type="text" class="form-control" id="phone_number"
                                    placeholder="Example: 9900723195"
                                    name="phone_number"
                                    v-model="phone_number"
@@ -59,8 +59,8 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="exampleFormControlSelect2">Select Employees</label>
-                            <select multiple="" class="form-control" id="exampleFormControlSelect2"
+                            <label for="employee_id">Select Employees</label>
+                            <select multiple="" class="form-control" id="employee_id"
                                     name="employee_id">
                                 <option value="">1</option>
 
@@ -85,30 +85,29 @@ export default {
     data() {
         return {
             error: [],
-            first_name: null,
-            address_number: null,
-            address_street: null,
-            phone_number: null,
+            name: '',
+            address_number: '',
+            address_street: '',
+            phone_number: '',
             success: ''
         }
     },
     methods: {
         add() {
-            axios.get('#/customer/store', {
-                first_name: this.first_name,
+            axios.post('http://localhost/crm-project/public/customer/store', {
+                name: this.name,
                 address_number: this.address_number,
                 address_street: this.address_street,
                 phone_number: this.phone_number,
             })
-                .then((data) => {
-
-                    this.$emit('insertData', data.data);
+                .then(data => {
+                    this.$emit('insertData', data);
                     this.success = 'successfully';
                 })
                 .catch((error) => {
                     this.error = error.response.data.errors.name;
                 })
-            this.first_name = '';
+            this.name = '';
             this.address_number = '';
             this.address_street = '';
             this.phone_number = '';
@@ -116,7 +115,7 @@ export default {
         },
         clearModal() {
             this.error = [];
-            this.first_name = '';
+            this.name = '';
             this.address_number = '';
             this.address_street = '';
             this.phone_number = '';

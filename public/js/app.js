@@ -1994,10 +1994,10 @@ __webpack_require__.r(__webpack_exports__);
   data: function data() {
     return {
       error: [],
-      first_name: null,
-      address_number: null,
-      address_street: null,
-      phone_number: null,
+      name: '',
+      address_number: '',
+      address_street: '',
+      phone_number: '',
       success: ''
     };
   },
@@ -2005,19 +2005,19 @@ __webpack_require__.r(__webpack_exports__);
     add: function add() {
       var _this = this;
 
-      axios.get('#/customer/store', {
-        first_name: this.first_name,
+      axios.post('http://localhost/crm-project/public/customer/store', {
+        name: this.name,
         address_number: this.address_number,
         address_street: this.address_street,
         phone_number: this.phone_number
       }).then(function (data) {
-        _this.$emit('insertData', data.data);
+        _this.$emit('insertData', data);
 
         _this.success = 'successfully';
       })["catch"](function (error) {
         _this.error = error.response.data.errors.name;
       });
-      this.first_name = '';
+      this.name = '';
       this.address_number = '';
       this.address_street = '';
       this.phone_number = '';
@@ -2025,7 +2025,7 @@ __webpack_require__.r(__webpack_exports__);
     },
     clearModal: function clearModal() {
       this.error = [];
-      this.first_name = '';
+      this.name = '';
       this.address_number = '';
       this.address_street = '';
       this.phone_number = '';
@@ -2164,7 +2164,8 @@ __webpack_require__.r(__webpack_exports__);
     });
   },
   methods: {
-    refreshCustomer: function refreshCustomer() {// window.location.reload();
+    refreshCustomer: function refreshCustomer() {
+      window.location.reload();
     }
   }
 });
@@ -38350,33 +38351,31 @@ var render = function() {
               : _vm._e(),
             _vm._v(" "),
             _c("div", { staticClass: "form-group" }, [
-              _c("label", { attrs: { for: "exampleFormControlInput1" } }, [
-                _vm._v("Name")
-              ]),
+              _c("label", { attrs: { for: "first_name" } }, [_vm._v("Name")]),
               _vm._v(" "),
               _c("input", {
                 directives: [
                   {
                     name: "model",
                     rawName: "v-model",
-                    value: _vm.first_name,
-                    expression: "first_name"
+                    value: _vm.name,
+                    expression: "name"
                   }
                 ],
                 staticClass: "form-control",
                 attrs: {
                   type: "text",
-                  id: "exampleFormControlInput1",
+                  id: "name",
                   placeholder: "Example: ali",
-                  name: "first_name"
+                  name: "name"
                 },
-                domProps: { value: _vm.first_name },
+                domProps: { value: _vm.name },
                 on: {
                   input: function($event) {
                     if ($event.target.composing) {
                       return
                     }
-                    _vm.first_name = $event.target.value
+                    _vm.name = $event.target.value
                   }
                 }
               }),
@@ -38396,7 +38395,7 @@ var render = function() {
             ]),
             _vm._v(" "),
             _c("div", { staticClass: "form-group" }, [
-              _c("label", { attrs: { for: "exampleFormControlInput1" } }, [
+              _c("label", { attrs: { for: "address_number" } }, [
                 _vm._v(" Address Number")
               ]),
               _vm._v(" "),
@@ -38412,7 +38411,7 @@ var render = function() {
                 staticClass: "form-control",
                 attrs: {
                   type: "text",
-                  id: "exampleFormControlInput1",
+                  id: "address_number",
                   placeholder: "Example: 123",
                   name: "address_number"
                 },
@@ -38442,7 +38441,7 @@ var render = function() {
             ]),
             _vm._v(" "),
             _c("div", { staticClass: "form-group" }, [
-              _c("label", { attrs: { for: "exampleFormControlInput1" } }, [
+              _c("label", { attrs: { for: "address_street" } }, [
                 _vm._v("Address Street")
               ]),
               _vm._v(" "),
@@ -38458,7 +38457,7 @@ var render = function() {
                 staticClass: "form-control",
                 attrs: {
                   type: "text",
-                  id: "exampleFormControlInput1",
+                  id: "address_street",
                   placeholder: "Example: iran, isfahan, ...",
                   name: "address_street"
                 },
@@ -38488,7 +38487,7 @@ var render = function() {
             ]),
             _vm._v(" "),
             _c("div", { staticClass: "form-group" }, [
-              _c("label", { attrs: { for: "exampleFormControlInput1" } }, [
+              _c("label", { attrs: { for: "phone_number" } }, [
                 _vm._v("Phone Number")
               ]),
               _vm._v(" "),
@@ -38504,7 +38503,7 @@ var render = function() {
                 staticClass: "form-control",
                 attrs: {
                   type: "text",
-                  id: "exampleFormControlInput1",
+                  id: "phone_number",
                   placeholder: "Example: 9900723195",
                   name: "phone_number"
                 },
@@ -38568,7 +38567,7 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "form-group" }, [
-      _c("label", { attrs: { for: "exampleFormControlSelect2" } }, [
+      _c("label", { attrs: { for: "employee_id" } }, [
         _vm._v("Select Employees")
       ]),
       _vm._v(" "),
@@ -38576,11 +38575,7 @@ var staticRenderFns = [
         "select",
         {
           staticClass: "form-control",
-          attrs: {
-            multiple: "",
-            id: "exampleFormControlSelect2",
-            name: "employee_id"
-          }
+          attrs: { multiple: "", id: "employee_id", name: "employee_id" }
         },
         [_c("option", { attrs: { value: "" } }, [_vm._v("1")])]
       )
@@ -56144,7 +56139,7 @@ var routes = [{
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-throw new Error("Module build failed (from ./node_modules/css-loader/index.js):\nModuleBuildError: Module build failed (from ./node_modules/sass-loader/dist/cjs.js):\nError: ENOENT: no such file or directory, open 'D:\\xampp\\htdocs\\crm-project\\resources\\sass\\app.scss'\n    at D:\\xampp\\htdocs\\crm-project\\node_modules\\webpack\\lib\\NormalModule.js:316:20\n    at D:\\xampp\\htdocs\\crm-project\\node_modules\\loader-runner\\lib\\LoaderRunner.js:367:11\n    at D:\\xampp\\htdocs\\crm-project\\node_modules\\loader-runner\\lib\\LoaderRunner.js:203:19\n    at D:\\xampp\\htdocs\\crm-project\\node_modules\\enhanced-resolve\\lib\\CachedInputFileSystem.js:85:15\n    at processTicksAndRejections (internal/process/task_queues.js:75:11)");
+// removed by extract-text-webpack-plugin
 
 /***/ }),
 

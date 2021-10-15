@@ -38,36 +38,18 @@ class CustomerController extends Controller
      */
     public function store(Request $request): string
     {
-
-//        $this->validate($request,['name'=>'required']);
-
-
-        dd($request->firs_name);
-
+       $this->validate($request,['name'=>'required']);
 
         $data = DB::table('customers')->insert([
-            'first_name' => $request->firs_name,
+            'name' => $request->name,
             'address_number' => $request->address_number,
             'address_street' => $request->address_street,
             'phone_number' => $request->phone_number
         ]);
 
-
-//        $dat = Customers::create($request->all());
-
-        return [$data,'done'];
-
-//        $customer = new Customers();
-//        $customer->name = $request->name;
-//        $customer->address_number = $request->address_number;
-//        $customer->address_street = $request->address_street;
-//        $customer->phone_number = $request->phone_number;
-//        $customer->save();
-
-
-//        return response()->json([
-//            'message' => 'new customer created'
-//        ]);
+        return response()->json([
+            'message' => 'new customer created'
+        ]);
 
     }
 

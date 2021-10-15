@@ -118,7 +118,7 @@ export default {
     },
     methods: {
         refreshCustomer(){
-            // window.location.reload();
+            window.location.reload();
 
         }
     }
