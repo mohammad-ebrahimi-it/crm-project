@@ -15,7 +15,7 @@ class CreateEmployeesTable extends Migration
     {
         Schema::create('employees', function (Blueprint $table) {
             $table->id('employee_id');
-            $table->string('name');
+            $table->string('emp_name');
             $table->enum('department', [
                 'human resources',
                 'Management systems',
@@ -23,7 +23,7 @@ class CreateEmployeesTable extends Migration
                 'organizational behavior',
                 'Organizational Structure',
                 'Organizational strategy'
-                ]);
+            ]);
             $table->integer('phone_number');
         });
     }

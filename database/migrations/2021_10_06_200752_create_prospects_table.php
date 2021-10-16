@@ -16,7 +16,7 @@ class CreateProspectsTable extends Migration
         Schema::dropIfExists('prospects');
         Schema::create('prospects', function (Blueprint $table) {
             $table->id('prospect_id');
-            $table->string('name');
+            $table->string('pro_name');
             $table->integer('address_number');
             $table->string('address_street');
             $table->integer('phone_number');

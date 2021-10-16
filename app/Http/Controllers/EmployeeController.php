@@ -40,23 +40,27 @@ class EmployeeController extends Controller
     public function store(Request $request): JsonResponse
     {
 
-        $this->validate($request, ['name'=>'required']);
+        $this->validate($request, [
+            'emp_name' => 'required',
+            'department' => 'required',
+            'phone_number' => 'required',
+        ]);
 
         DB::table('employees')->insert([
-           'name'=> $request->name,
-           'department' => $request->department,
-           'phone_number' => $request->phone_number
+            'emp_name' => $request->emp_name,
+            'department' => $request->department,
+            'phone_number' => $request->phone_number
         ]);
 
         return response()->json([
-           'message'=> 'employee add successfully'
+            'message' => 'employee add successfully'
         ]);
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
     public function show($id)
@@ -67,7 +71,7 @@ class EmployeeController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
@@ -79,7 +83,7 @@ class EmployeeController extends Controller
      * Update the specified resource in storage.
      *
      * @param Request $request
-     * @param  int  $id
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
@@ -90,7 +94,7 @@ class EmployeeController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)

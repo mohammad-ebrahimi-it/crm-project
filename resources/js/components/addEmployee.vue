@@ -6,7 +6,7 @@
 
 
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Add Customer</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Add Employee</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close" @click="clearModal">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -14,11 +14,11 @@
                 <div class="modal-body">
                     <p class="alert alert-success" v-if="success.length>0">{{ success }}</p>
                     <div class="form-group">
-                        <label for="first_name">Name</label>
-                        <input type="text" class="form-control" id="name"
+                        <label for="emp_name">Name</label>
+                        <input type="text" class="form-control" id="emp_name"
                                placeholder="Example: ali"
-                               name="name"
-                               v-model="name"
+                               name="emp_name"
+                               v-model="emp_name"
                         >
                         <ul v-if="error" class="list-unstyled">
                             <li v-for="err of error" class="alert alert-danger">{{ err }}</li>
@@ -31,12 +31,12 @@
                                 v-model="department"
                         >
                             <option selected>....</option>
-                            <option  name="department" value="human resources">human resources</option>
-                            <option  name="department" value="Management systems">Management systems</option>
-                            <option  name="department" value="Policy making">Policy making</option>
-                            <option  name="department" value="organizational behavior">organizational behavior</option>
-                            <option  name="department" value="Organizational Structure">Organizational Structure</option>
-                            <option  name="department" value="Organizational strategy">Organizational strategy</option>
+                            <option name="department" value="human resources">human resources</option>
+                            <option name="department" value="Management systems">Management systems</option>
+                            <option name="department" value="Policy making">Policy making</option>
+                            <option name="department" value="organizational behavior">organizational behavior</option>
+                            <option name="department" value="Organizational Structure">Organizational Structure</option>
+                            <option name="department" value="Organizational strategy">Organizational strategy</option>
                         </select>
                     </div>
                     <div class="form-group">
@@ -70,7 +70,7 @@ export default {
     data() {
         return {
             error: [],
-            name: '',
+            emp_name: '',
             department: '',
             phone_number: '',
             success: ''
@@ -79,7 +79,7 @@ export default {
     methods: {
         add() {
             axios.post('http://localhost/crm-project/public/employee/store', {
-                name: this.name,
+                emp_name: this.emp_name,
                 department: this.department,
                 phone_number: this.phone_number,
             })
@@ -90,14 +90,14 @@ export default {
                 .catch((error) => {
                     this.error = error.response.data.errors.name;
                 })
-            this.name = '';
+            this.emp_name = '';
             this.department = '';
             this.phone_number = '';
             this.error = [];
         },
         clearModal() {
             this.error = [];
-            this.name = '';
+            this.emp_name = '';
             this.department = '';
             this.phone_number = '';
             this.success = '';

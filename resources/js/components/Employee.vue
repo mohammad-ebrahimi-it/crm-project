@@ -5,7 +5,7 @@
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="./">Home</a></li>
                 <li class="breadcrumb-item">Tables</li>
-                <li class="breadcrumb-item active" aria-current="page">Simple Tables</li>
+                <li class="breadcrumb-item active" aria-current="page">Employees Tables</li>
             </ol>
         </div>
 
@@ -14,7 +14,7 @@
                 <!-- Simple Tables -->
                 <div class="card">
                     <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                        <h6 class="m-0 font-weight-bold text-primary">Simple Tables</h6>
+                        <h6 class="m-0 font-weight-bold text-primary">Employees </h6>
                     </div>
                     <div class="table-responsive">
                         <table class="table align-items-center table-flush">
@@ -30,7 +30,7 @@
                             <tbody>
                             <tr v-for="employee of employees" :key="employee.employee_id">
                                 <td><a href="#">{{ employee.employee_id }}</a></td>
-                                <td>{{ employee.name }}</td>
+                                <td>{{ employee.emp_name }}</td>
                                 <td>{{ employee.phone_number }}</td>
                                 <td>
                                     <span

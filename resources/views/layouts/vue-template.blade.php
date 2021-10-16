@@ -13,9 +13,6 @@
     <link href="{{asset('tem/css/ruang-admin.min.css')}}" rel="stylesheet">
 
 
-
-
-
 </head>
 <body id="page-top">
 <div id="app">
@@ -65,7 +62,7 @@
         <div id="content-wrapper" class="d-flex flex-column">
             <div id="content">
                 <!-- TopBar -->
-                <nav class="navbar navbar-expand navbar-light bg-navbar topbar mb-4 static-top" >
+                <nav class="navbar navbar-expand navbar-light bg-navbar topbar mb-4 static-top">
                     <button id="sidebarToggleTop" class="btn btn-link rounded-circle mr-3">
                         <i class="fa fa-bars"></i>
                     </button>
@@ -152,7 +149,8 @@
                                 </h6>
                                 <a class="dropdown-item d-flex align-items-center" href="#">
                                     <div class="dropdown-list-image mr-3">
-                                        <img class="rounded-circle" src="{{asset('tem/img/man.png')}}" style="max-width: 60px" alt="">
+                                        <img class="rounded-circle" src="{{asset('tem/img/man.png')}}"
+                                             style="max-width: 60px" alt="">
                                         <div class="status-indicator bg-success"></div>
                                     </div>
                                     <div class="font-weight-bold">
@@ -165,7 +163,8 @@
                                 </a>
                                 <a class="dropdown-item d-flex align-items-center" href="#">
                                     <div class="dropdown-list-image mr-3">
-                                        <img class="rounded-circle" src="{{asset('tem/img/girl.png')}}" style="max-width: 60px" alt="">
+                                        <img class="rounded-circle" src="{{asset('tem/img/girl.png')}}"
+                                             style="max-width: 60px" alt="">
                                         <div class="status-indicator bg-default"></div>
                                     </div>
                                     <div>
@@ -230,7 +229,8 @@
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <img class="img-profile rounded-circle" src="{{asset('tem/img/boy.png')}}" style="max-width: 60px">
+                                <img class="img-profile rounded-circle" src="{{asset('tem/img/boy.png')}}"
+                                     style="max-width: 60px">
                                 <span class="ml-2 d-none d-lg-inline text-white small">Maman Ketoprak</span>
                             </a>
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"

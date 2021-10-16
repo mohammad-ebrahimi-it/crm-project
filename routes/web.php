@@ -19,10 +19,13 @@ Route::get('/', function () {
 //middleware('auth')->
 Auth::routes();
 
-Route::get('/vue', function (){
+Route::get('/vue', function () {
     return view('test');
 });
 Route::get('customer/store', 'CustomerController@store')->name('store');
 Route::post('customer/store', 'CustomerController@store');
 Route::post('employee/store', 'EmployeeController@store');
+Route::post('prospect/store', 'ProspectController@store');
+
+Route::get('prospect/get', 'ProspectController@index');
 Route::get('/home', 'HomeController@index')->name('home');

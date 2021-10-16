@@ -4,8 +4,8 @@ let Customer = require('./components/Customers.vue').default;
 let Prospects = require('./components/Prospects.vue').default;
 
 export const routes = [
-    { path: '/', component: Index },
-    { path: '/employee', component: Employee },
-    { path: '/customer', component: Customer },
-    { path: '/prospect', component: Prospects }
+    {path: '/', component: Index},
+    {path: '/employee', component: Employee},
+    {path: '/customer', component: Customer},
+    {path: '/prospect', component: Prospects}
 ]
