@@ -57229,6 +57229,38 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/components/CustomerEmployee.vue":
+/*!******************************************************!*\
+  !*** ./resources/js/components/CustomerEmployee.vue ***!
+  \******************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+var render, staticRenderFns
+var script = {}
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_0__["default"])(
+  script,
+  render,
+  staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+component.options.__file = "resources/js/components/CustomerEmployee.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
 /***/ "./resources/js/components/Customers.vue":
 /*!***********************************************!*\
   !*** ./resources/js/components/Customers.vue ***!
@@ -57364,6 +57396,38 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Employee_vue_vue_type_template_id_99aa15ce___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
+
+/***/ }),
+
+/***/ "./resources/js/components/EmployeeProspect.vue":
+/*!******************************************************!*\
+  !*** ./resources/js/components/EmployeeProspect.vue ***!
+  \******************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+var render, staticRenderFns
+var script = {}
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_0__["default"])(
+  script,
+  render,
+  staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+component.options.__file = "resources/js/components/EmployeeProspect.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
 
 /***/ }),
 
@@ -57592,6 +57656,10 @@ var Customer = __webpack_require__(/*! ./components/Customers.vue */ "./resource
 
 var Prospects = __webpack_require__(/*! ./components/Prospects.vue */ "./resources/js/components/Prospects.vue")["default"];
 
+var EmployeeProspect = __webpack_require__(/*! ./components/EmployeeProspect.vue */ "./resources/js/components/EmployeeProspect.vue")["default"];
+
+var CustomerEmployee = __webpack_require__(/*! ./components/CustomerEmployee.vue */ "./resources/js/components/CustomerEmployee.vue")["default"];
+
 var routes = [{
   path: '/',
   component: Index
@@ -57604,6 +57672,12 @@ var routes = [{
 }, {
   path: '/prospect',
   component: Prospects
+}, {
+  path: '/employeeProspect',
+  component: EmployeeProspect
+}, {
+  path: '/customerEmployee',
+  component: CustomerEmployee
 }];
 
 /***/ }),

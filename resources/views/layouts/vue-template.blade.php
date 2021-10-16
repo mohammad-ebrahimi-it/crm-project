@@ -39,18 +39,17 @@
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseBootstrap"
                    aria-expanded="true" aria-controls="collapseBootstrap">
                     <i class="far fa-fw fa-window-maximize"></i>
-                    <span>Bootstrap UI</span>
+                    <span>Management</span>
                 </a>
                 <div id="collapseBootstrap" class="collapse" aria-labelledby="headingBootstrap"
                      data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Bootstrap UI</h6>
+                        <h6 class="collapse-header">crm</h6>
                         <router-link to="/employee" class="collapse-item" href="alerts.html">Employee</router-link>
                         <router-link to="/customer" class="collapse-item" href="buttons.html">Customer</router-link>
                         <router-link to="/prospect" class="collapse-item" href="dropdowns.html">Prospect</router-link>
-                        <a class="collapse-item" href="modals.html">Modals</a>
-                        <a class="collapse-item" href="popovers.html">Popovers</a>
-                        <a class="collapse-item" href="progress-bar.html">Progress Bars</a>
+                        <router-link class="collapse-item" to="/employeeProspect">Employee Prospect</router-link>
+                        <router-link class="collapse-item" to="/customerEmployee">Customer Employee</router-link>
                     </div>
                 </div>
             </li>
