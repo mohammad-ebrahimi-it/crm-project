@@ -26,6 +26,9 @@ Route::get('customer/store', 'CustomerController@store')->name('store');
 Route::post('customer/store', 'CustomerController@store');
 Route::post('employee/store', 'EmployeeController@store');
 Route::post('prospect/store', 'ProspectController@store');
+Route::post('empPros/store', 'EmployeeProspectController@store');
+
+Route::get('empPros/get', 'EmployeeProspectController@index');
 
 Route::get('prospect/get', 'ProspectController@index');
 Route::get('/home', 'HomeController@index')->name('home');
