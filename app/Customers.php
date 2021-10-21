@@ -13,4 +13,9 @@ class Customers extends Model
     {
         return $this->hasMany(CustomerEmployee::class);
     }
+
+    public function customers()
+    {
+        return $this->belongsTo('App\Customers','customer_id', 'customer_id');
+    }
 }

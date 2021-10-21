@@ -41,16 +41,22 @@ class ProspectController extends Controller
             'customer_id' => 'required',
         ]);
 
-        DB::table('prospects')->insert([
-            'pro_name' => $request->pro_name,
-            'address_number' => $request->address_number,
-            'address_street' => $request->address_street,
-            'phone_number' => $request->phone_number,
-            'customer_id' => $request->customer_id
-        ]);
+        $pros = DB::select('select * from `prospects` where `prospects`.`customer_id` = :id', ['id' => $request->customer_id]);
 
+        if (!$pros) {
+            DB::table('prospects')->insert([
+                'pro_name' => $request->pro_name,
+                'address_number' => $request->address_number,
+                'address_street' => $request->address_street,
+                'phone_number' => $request->phone_number,
+                'customer_id' => $request->customer_id
+            ]);
+            return response()->json([
+                'message' => 'add prospect successfully'
+            ]);
+        }
         return response()->json([
-            'message' => 'add prospect successfully'
+            'message' => 'field customer id is repetitious'
         ]);
     }
 
@@ -61,10 +67,10 @@ class ProspectController extends Controller
      * @param int $id
      * @return Response
      */
-    public function edit(int $id): Response
-    {
-        //
-    }
+//    public function edit(int $id): Response
+//    {
+//        //
+//    }
 
 
 }

@@ -19,7 +19,6 @@ class EmployeeProspectController extends Controller
 
     public function store(Request $request): \Illuminate\Http\JsonResponse
     {
-//        $this->validate($request, ['prospect_id' => 'require', 'employee_id' => 'require']);
 
         foreach ($request->prospect_id as $item)
             foreach ($request->employee_id as $value)

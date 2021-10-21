@@ -21,7 +21,7 @@
                                v-model="emp_name"
                         >
                         <ul v-if="error" class="list-unstyled">
-                            <li v-for="err of error" class="alert alert-danger">{{ err }}</li>
+                            <li v-for="err of error.emp_name" class="alert alert-danger">{{ err }}</li>
                         </ul>
                     </div>
                     <div class="form-group">
@@ -38,6 +38,9 @@
                             <option name="department" value="Organizational Structure">Organizational Structure</option>
                             <option name="department" value="Organizational strategy">Organizational strategy</option>
                         </select>
+                        <ul v-if="error" class="list-unstyled">
+                            <li v-for="err of error.department" class="alert alert-danger">{{ err }}</li>
+                        </ul>
                     </div>
                     <div class="form-group">
                         <label for="phone_number">Phone Number</label>
@@ -47,7 +50,7 @@
                                v-model="phone_number"
                         >
                         <ul v-if="error" class="list-unstyled">
-                            <li v-for="err of error" class="alert alert-danger">{{ err }}</li>
+                            <li v-for="err of error.phone_number" class="alert alert-danger">{{ err }}</li>
                         </ul>
                     </div>
 
@@ -85,10 +88,10 @@ export default {
             })
                 .then(data => {
                     this.$emit('insertData', data);
-                    this.success = 'successfully';
+                    this.success = data.data.message;
                 })
                 .catch((error) => {
-                    this.error = error.response.data.errors.name;
+                    this.error = error.response.data.errors;
                 })
             this.emp_name = '';
             this.department = '';

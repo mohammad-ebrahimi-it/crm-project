@@ -8,7 +8,7 @@
                         <router-link to="/">Home</router-link>
                     </li>
                     <li class="breadcrumb-item">Tables</li>
-                    <li aria-current="page" class="breadcrumb-item active">Customers</li>
+                    <li aria-current="page" class="breadcrumb-item active">Employee Prospect</li>
                 </ol>
             </div>
             <div class="row">
@@ -127,17 +127,14 @@
 </template>
 <script>
 import AddEmpPros from "./AddEmpPros";
-
-export let containers = 1;
+let containers = 1
 export default {
 
     components: {AddEmpPros},
     data() {
-        let containers = 1
         return {
             empPros: null,
         }
-
 
     },
 

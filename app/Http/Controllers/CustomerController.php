@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Customers;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Validation\ValidationException;
@@ -14,10 +14,10 @@ class CustomerController extends Controller
      * Store a newly created resource in storage.
      *
      * @param Request $request
-     * @return string
+     * @return JsonResponse
      * @throws ValidationException
      */
-    public function store(Request $request): string
+    public function store(Request $request): JsonResponse
     {
         $this->validate($request, [
             'cus_name' => 'required',

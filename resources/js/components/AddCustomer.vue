@@ -8,11 +8,14 @@
                 <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalLabel">Add Customer</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close" @click="clearModal">
-                        <span aria-hidden="true">&times;</span>
+                        <span aria-hidden="true" >&times;</span>
                     </button>
                 </div>
+                <div v-if="message.length>0">
+                    <p class="alert alert-success" v-if="message == 'new customer created'" >{{ message }}</p>
+                </div>
                 <div class="modal-body">
-                    <p class="alert alert-success" v-if="success.length>0">{{ success }}</p>
+
                     <div class="form-group">
                         <label for="cus_name">Name</label>
                         <input type="text" class="form-control" id="cus_name"
@@ -21,7 +24,7 @@
                                v-model="cus_name"
                         >
                         <ul v-if="error" class="list-unstyled">
-                            <li v-for="err of error" class="alert alert-danger">{{ err }}</li>
+                            <li v-for="err of error.cus_name" class="alert alert-danger">{{ err }}</li>
                         </ul>
                     </div>
                     <div class="form-group">
@@ -32,7 +35,7 @@
                                v-model="address_number"
                         >
                         <ul v-if="error" class="list-unstyled">
-                            <li v-for="err of error" class="alert alert-danger">{{ err }}</li>
+                            <li v-for="err of error.address_number" class="alert alert-danger">{{ err }}</li>
                         </ul>
                     </div>
                     <div class="form-group">
@@ -43,7 +46,7 @@
                                v-model="address_street"
                         >
                         <ul v-if="error" class="list-unstyled">
-                            <li v-for="err of error" class="alert alert-danger">{{ err }}</li>
+                            <li v-for="err of error.address_number" class="alert alert-danger">{{ err }}</li>
                         </ul>
                     </div>
                     <div class="form-group">
@@ -54,7 +57,7 @@
                                v-model="phone_number"
                         >
                         <ul v-if="error" class="list-unstyled">
-                            <li v-for="err of error" class="alert alert-danger">{{ err }}</li>
+                            <li v-for="err of error.phone_number" class="alert alert-danger">{{ err }}</li>
                         </ul>
                     </div>
 
@@ -80,7 +83,7 @@ export default {
             address_number: '',
             address_street: '',
             phone_number: '',
-            success: ''
+            message: ''
         }
     },
     methods: {
@@ -93,10 +96,10 @@ export default {
             })
                 .then(data => {
                     this.$emit('insertData', data);
-                    this.success = 'successfully';
+                    this.message = data.data.message;
                 })
                 .catch((error) => {
-                    this.error = error.response.data.errors.name;
+                    this.error = error.response.data.errors;
                 })
             this.cus_name = '';
             this.address_number = '';
@@ -110,7 +113,7 @@ export default {
             this.address_number = '';
             this.address_street = '';
             this.phone_number = '';
-            this.success = '';
+            this.message = '';
 
         }
     }

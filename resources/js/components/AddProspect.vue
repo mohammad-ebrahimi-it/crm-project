@@ -11,8 +11,11 @@
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
+                    <div  v-if="success.length>0" >
+                    <p class="alert alert-success" v-if="success == 'add prospect successfully'">{{ success }}</p>
+                        <p class="alert alert-danger" v-if="success == 'field customer id is repetitious'">{{success}}</p>
+                    </div>
                 <div class="modal-body">
-                    <p class="alert alert-success" v-if="success.length>0">{{ success }}</p>
                     <div class="form-group">
                         <label for="pro_name">Name</label>
                         <input type="text" class="form-control" id="pro_name"
@@ -20,8 +23,9 @@
                                name="pro_name"
                                v-model="pro_name"
                         >
-                        <ul v-if="error" class="list-unstyled">
-                            <li v-for="err of error" class="alert alert-danger">{{ err }}</li>
+
+                        <ul v-if="error" class="list-unstyled" v-for="err of error.pro_name">
+                            <li  class="alert alert-danger">{{ err }}</li>
                         </ul>
                     </div>
                     <div class="form-group">
@@ -32,7 +36,7 @@
                                v-model="address_number"
                         >
                         <ul v-if="error" class="list-unstyled">
-                            <li v-for="err of error" class="alert alert-danger">{{ err }}</li>
+                            <li v-for="err of error.address_number" class="alert alert-danger">{{ err }}</li>
                         </ul>
                     </div>
                     <div class="form-group">
@@ -43,7 +47,7 @@
                                v-model="address_street"
                         >
                         <ul v-if="error" class="list-unstyled">
-                            <li v-for="err of error" class="alert alert-danger">{{ err }}</li>
+                            <li v-for="err of error.address_street" class="alert alert-danger">{{ err }}</li>
                         </ul>
                     </div>
                     <div class="form-group">
@@ -54,7 +58,7 @@
                                v-model="phone_number"
                         >
                         <ul v-if="error" class="list-unstyled">
-                            <li v-for="err of error" class="alert alert-danger">{{ err }}</li>
+                            <li v-for="err of error.phone_number" class="alert alert-danger">{{ err }}</li>
                         </ul>
                     </div>
 
@@ -70,6 +74,9 @@
                                 {{customer.cus_name}}
                             </option>
                         </select>
+                        <ul v-if="error" class="list-unstyled">
+                            <li v-for="err of error.customer_id" class="alert alert-danger">{{ err }}</li>
+                        </ul>
                     </div>
 
 
@@ -117,10 +124,10 @@ export default {
             })
                 .then(data => {
                     this.$emit('insertData', data);
-                    this.success = 'successfully';
+                    this.success = data.data.message;
                 })
                 .catch((error) => {
-                    this.error = error.response.data.errors.name;
+                    this.error = error.response.data.errors;
                 })
             this.pro_name = '';
             this.address_number = '';
@@ -140,7 +147,6 @@ export default {
 
         }
     }
-
 
 }
 </script>
