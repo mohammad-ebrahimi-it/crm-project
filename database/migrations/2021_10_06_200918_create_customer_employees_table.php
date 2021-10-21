@@ -15,8 +15,8 @@ class CreateCustomerEmployeesTable extends Migration
     {
         Schema::create('customer_employees', function (Blueprint $table) {
 
-            $table->foreignId('customer_id')->references('customer_id')->on('customers');
-            $table->foreignId('employee_id')->references('employee_id')->on('employees');
+            $table->foreignId('customer_id')->references('customer_id')->on('customers')->onDelete('cascade');
+            $table->foreignId('employee_id')->references('employee_id')->on('employees')->onDelete('cascade');
         });
     }
 

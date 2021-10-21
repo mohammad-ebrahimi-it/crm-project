@@ -21,14 +21,15 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('/get/customers', function (){
+Route::get('/get/customers', function () {
     return Customers::all();
 });
 
-Route::get('/get/employees', function (){
+Route::get('/get/employees', function () {
     return Employees::all();
 });
 
-Route::get('/get/prospect', function (){
-    return Prospects::all();
+Route::get('/get/prospect', function () {
+    $a = new Customers();
+    return Prospects::all() . $a->cus_name;
 });

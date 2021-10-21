@@ -16,8 +16,8 @@ class CreateProspectEmployeesTable extends Migration
 
         Schema::create('prospect_employees', function (Blueprint $table) {
 
-            $table->foreignId('prospect_id')->references('prospect_id')->on('prospects');
-            $table->foreignId('employee_id')->references('employee_id')->on('employees');
+            $table->foreignId('prospect_id')->references('prospect_id')->on('prospects')->onDelete('cascade');
+            $table->foreignId('employee_id')->references('employee_id')->on('employees')->onDelete('cascade');
 
         });
     }

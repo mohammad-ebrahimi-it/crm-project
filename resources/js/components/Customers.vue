@@ -2,20 +2,20 @@
     <div>
         <div id="container-wrapper" class="container-fluid">
             <div class="d-sm-flex align-items-center justify-content-between mb-4"><h1 class="h3 mb-0 text-gray-800">
-                DataTables</h1>
+                Customers Table</h1>
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item">
                         <router-link to="/">Home</router-link>
                     </li>
                     <li class="breadcrumb-item">Tables</li>
-                    <li aria-current="page" class="breadcrumb-item active">DataTables</li>
+                    <li aria-current="page" class="breadcrumb-item active">Customers</li>
                 </ol>
             </div>
             <div class="row">
                 <div class="col-lg-12">
                     <div class="card mb-4">
                         <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between"><h6
-                            class="m-0 font-weight-bold text-primary">DataTables with Hover</h6></div>
+                            class="m-0 font-weight-bold text-primary">DataTables Customers</h6></div>
                         <div class="table-responsive p-3">
                             <div id="dataTableHover_wrapper" class="dataTables_wrapper dt-bootstrap4">
                                 <div class="row">
@@ -63,7 +63,7 @@
                                             <tr role="row" class="odd" v-for="customer in customers"
                                                 :key="customer.customer_id">
                                                 <td class="sorting_1">{{ customer.customer_id }}</td>
-                                                <td>{{ customer.name }}</td>
+                                                <td>{{ customer.cus_name }}</td>
                                                 <td>{{ customer.address_number }}</td>
                                                 <td>{{ customer.address_street }}</td>
                                                 <td>{{ customer.phone_number }}</td>
@@ -84,9 +84,6 @@
                 </div>
             </div>
 
-            <!-- Button trigger modal -->
-
-
             <!-- Modal -->
             <div id="model">
                 <AddCustomer @insertData="refreshCustomer"></AddCustomer>
@@ -97,10 +94,10 @@
 </template>
 <script>
 import AddCustomer from "./AddCustomer";
-// Vue.component('AddCustomer', require('./AddCustomer').default);
+
 export default {
     components: {AddCustomer},
-    data () {
+    data() {
         return {
             customers: null,
 
@@ -117,8 +114,8 @@ export default {
 
     },
     methods: {
-        refreshCustomer(){
-            // window.location.reload();
+        refreshCustomer() {
+            window.location.reload();
 
         }
     }

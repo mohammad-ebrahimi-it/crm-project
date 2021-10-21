@@ -8,8 +8,11 @@ require('./bootstrap');
 
 import Vue from 'vue'
 import VueRouter from 'vue-router'
+import VSwitch from 'v-switch-case'
 import {routes} from "./router.js";
+
 Vue.use(VueRouter)
+Vue.use(VSwitch)
 
 /**
  * The following block of code may be used to automatically register your
@@ -21,7 +24,6 @@ Vue.use(VueRouter)
 
 // const files = require.context('./', true, /\.vue$/i)
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
-
 
 
 /**

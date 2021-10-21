@@ -8,13 +8,9 @@
     <meta name="author" content="">
     <link href="{{asset('tem/img/logo/logo.png')}}" rel="icon">
     <title>RuangAdmin - Dashboard</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link href="{{asset('tem/vendor/fontawesome-free/css/all.min.css')}}" rel="stylesheet" type="text/css">
     <link href="{{asset('tem/vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet" type="text/css">
     <link href="{{asset('tem/css/ruang-admin.min.css')}}" rel="stylesheet">
-
-
-
 
 
 </head>
@@ -43,18 +39,17 @@
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseBootstrap"
                    aria-expanded="true" aria-controls="collapseBootstrap">
                     <i class="far fa-fw fa-window-maximize"></i>
-                    <span>Bootstrap UI</span>
+                    <span>Management</span>
                 </a>
                 <div id="collapseBootstrap" class="collapse" aria-labelledby="headingBootstrap"
                      data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Bootstrap UI</h6>
+                        <h6 class="collapse-header">crm</h6>
                         <router-link to="/employee" class="collapse-item" href="alerts.html">Employee</router-link>
                         <router-link to="/customer" class="collapse-item" href="buttons.html">Customer</router-link>
                         <router-link to="/prospect" class="collapse-item" href="dropdowns.html">Prospect</router-link>
-                        <a class="collapse-item" href="modals.html">Modals</a>
-                        <a class="collapse-item" href="popovers.html">Popovers</a>
-                        <a class="collapse-item" href="progress-bar.html">Progress Bars</a>
+                        <router-link class="collapse-item" to="/employeeProspect">Employee Prospect</router-link>
+                        <router-link class="collapse-item" to="/customerEmployee">Customer Employee</router-link>
                     </div>
                 </div>
             </li>
@@ -66,7 +61,7 @@
         <div id="content-wrapper" class="d-flex flex-column">
             <div id="content">
                 <!-- TopBar -->
-                <nav class="navbar navbar-expand navbar-light bg-navbar topbar mb-4 static-top" >
+                <nav class="navbar navbar-expand navbar-light bg-navbar topbar mb-4 static-top">
                     <button id="sidebarToggleTop" class="btn btn-link rounded-circle mr-3">
                         <i class="fa fa-bars"></i>
                     </button>
@@ -153,7 +148,8 @@
                                 </h6>
                                 <a class="dropdown-item d-flex align-items-center" href="#">
                                     <div class="dropdown-list-image mr-3">
-                                        <img class="rounded-circle" src="img/man.png" style="max-width: 60px" alt="">
+                                        <img class="rounded-circle" src="{{asset('tem/img/man.png')}}"
+                                             style="max-width: 60px" alt="">
                                         <div class="status-indicator bg-success"></div>
                                     </div>
                                     <div class="font-weight-bold">
@@ -166,7 +162,8 @@
                                 </a>
                                 <a class="dropdown-item d-flex align-items-center" href="#">
                                     <div class="dropdown-list-image mr-3">
-                                        <img class="rounded-circle" src="img/girl.png" style="max-width: 60px" alt="">
+                                        <img class="rounded-circle" src="{{asset('tem/img/girl.png')}}"
+                                             style="max-width: 60px" alt="">
                                         <div class="status-indicator bg-default"></div>
                                     </div>
                                     <div>
@@ -231,7 +228,8 @@
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <img class="img-profile rounded-circle" src="img/boy.png" style="max-width: 60px">
+                                <img class="img-profile rounded-circle" src="{{asset('tem/img/boy.png')}}"
+                                     style="max-width: 60px">
                                 <span class="ml-2 d-none d-lg-inline text-white small">Maman Ketoprak</span>
                             </a>
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
