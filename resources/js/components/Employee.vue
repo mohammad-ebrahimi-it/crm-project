@@ -24,11 +24,14 @@
                                 <th>Name</th>
                                 <th>Phone Number</th>
                                 <th>Department</th>
+                                <th>delete</th>
 
                             </tr>
                             </thead>
                             <tbody>
-                            <tr v-for="employee of employees" :key="employee.employee_id">
+                            <tr v-for="employee of employees" :key="employee.employee_id"
+                                v-bind:data-id="employee.employee_id"
+                            >
                                 <td><a href="#">{{ employee.employee_id }}</a></td>
                                 <td>{{ employee.emp_name }}</td>
                                 <td>{{ employee.phone_number }}</td>
@@ -63,6 +66,11 @@
                                     >{{ employee.department }}</span>
 
 
+                                </td>
+                                <td>
+                                    <a class="btn delete btn-danger" v-on:click="deleteEmp" href="#">
+                                        <i class="fas fa-trash"></i>
+                                    </a>
                                 </td>
                             </tr>
 
@@ -132,8 +140,33 @@ export default {
         },
         clear() {
             this.className = ''
+        },
+        deleteEmp() {
+            swal({
+                title: "warning!",
+                text: "Are you sure delete item?",
+                icon: "warning",
+                buttons: ["no", "yes"],
+                dangerMode: true,
+
+            })
+                .then((willDelete) => {
+                    if (willDelete) {
+                        $.ajax({
+                            url: `employee/delete/${$("a.delete").parent().parent().attr("data-id")}`,
+                            method: "get",
+                            success: function (response_id) {
+                                $(`tr[data-id=${response_id}]`).remove();
+                            }
+                        });
+                        swal("successfully ! your item is deleted", {
+                            icon: "success",
+                            buttons: "ok"
+                        });
+                    }
+                })
         }
     }
-
 }
+
 </script>

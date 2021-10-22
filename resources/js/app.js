@@ -9,10 +9,12 @@ require('./bootstrap');
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import VSwitch from 'v-switch-case'
+import VueSwal from 'vue-swal'
 import {routes} from "./router.js";
 
 Vue.use(VueRouter)
 Vue.use(VSwitch)
+Vue.use(VueSwal)
 
 /**
  * The following block of code may be used to automatically register your

@@ -59,6 +59,11 @@
                                                         aria-label="Start date: activate to sort column ascending"
                                                         class="sorting" style="width: 118.317px;">Customer
                                                     </th>
+                                                    <th tabindex="0" aria-controls="dataTableHover" rowspan="1"
+                                                        colspan="1"
+                                                        aria-label="Start date: activate to sort column ascending"
+                                                        class="sorting" style="width: 118.317px;">delete
+                                                    </th>
 
                                                 </tr>
                                                 </thead>
@@ -70,18 +75,24 @@
                                                     <th rowspan="1" colspan="1">Address street</th>
                                                     <th rowspan="1" colspan="1">Phone Number</th>
                                                     <th rowspan="1" colspan="1">Customer</th>
+                                                    <th rowspan="1" colspan="1">delete</th>
 
                                                 </tr>
                                                 </tfoot>
                                                 <tbody>
                                                 <tr role="row" class="odd" v-for="prospect in prospects"
-                                                    :key="prospect.prospect_id">
+                                                    :key="prospect.prospect_id"
+                                                    v-bind:data-id="prospect.prospect_id"
+                                                >
                                                     <td class="sorting_1">{{ prospect.prospect_id }}</td>
                                                     <td>{{ prospect.pro_name }}</td>
                                                     <td>{{ prospect.address_number }}</td>
                                                     <td>{{ prospect.address_street }}</td>
                                                     <td>{{ prospect.phone_number }}</td>
                                                     <td>{{ prospect.cus_name }}</td>
+                                                    <td>
+                                                        <a class="btn btn-outline-danger mb-1 delete" href="#" v-on:click="deletePros"> delete</a>
+                                                    </td>
                                                 </tr>
 
                                                 </tbody>
@@ -131,6 +142,32 @@ export default {
     methods: {
         reloadPage() {
             window.location.reload();
+        },
+        deletePros(){
+            swal({
+                title: "warning!",
+                text: "Are you sure delete item?",
+                icon: "warning",
+                buttons: ["no", "yes"],
+                dangerMode: true,
+
+            })
+                .then((willDelete) => {
+                    if (willDelete) {
+                        $.ajax({
+                            url: `prospect/delete/${$("a.delete").parent().parent().attr("data-id")}`,
+                            method: "get",
+                            success: function (response_id) {
+                                $(`tr[data-id=${response_id}]`).remove();
+                            }
+                        });
+                        swal("successfully ! your item is deleted", {
+                            icon: "success",
+                            buttons: "ok"
+                        });
+                    }
+                })
+
         }
     }
 

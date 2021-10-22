@@ -2,21 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bbb91e65-7e31-480d-80bb-01f885b68c34" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/js/components/AddCusEmp.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Customers.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Customers.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CustomerController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CustomerController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/EmployeeProspectController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/EmployeeProspectController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/EmployeeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/EmployeeController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ProspectController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProspectController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Prospects.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Prospects.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_10_06_200856_create_prospect_employees_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_10_06_200856_create_prospect_employees_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_10_06_200918_create_customer_employees_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_10_06_200918_create_customer_employees_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/AddCustomer.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/AddCustomer.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/AddProspect.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/AddProspect.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/CustomerEmployee.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/CustomerEmployee.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/EmployeeProspect.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/EmployeeProspect.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/addEmployee.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/addEmployee.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/Customers.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Customers.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/Employee.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Employee.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/Prospects.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Prospects.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -48,14 +45,6 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="GitSEFilterConfiguration">
-    <file-type-list>
-      <filtered-out-file-type name="LOCAL_BRANCH" />
-      <filtered-out-file-type name="REMOTE_BRANCH" />
-      <filtered-out-file-type name="TAG" />
-      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
-    </file-type-list>
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -173,7 +162,6 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -209,14 +197,7 @@
       <workItem from="1634104823807" duration="15595000" />
       <workItem from="1634152168804" duration="8568000" />
       <workItem from="1634191166382" duration="9554000" />
-      <workItem from="1634277687692" duration="9766000" />
-      <workItem from="1634293209385" duration="17575000" />
-      <workItem from="1634372280174" duration="578000" />
-      <workItem from="1634393318588" duration="13192000" />
-      <workItem from="1634563373810" duration="3106000" />
-      <workItem from="1634647993665" duration="8288000" />
-      <workItem from="1634732112181" duration="10871000" />
-      <workItem from="1634824951967" duration="8871000" />
+      <workItem from="1634927300148" duration="1606000" />
     </task>
     <servers />
   </component>
