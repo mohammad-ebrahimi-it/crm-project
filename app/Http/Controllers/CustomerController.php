@@ -38,6 +38,10 @@ class CustomerController extends Controller
         ]);
 
     }
-
+    public function destroy($id)
+    {
+        DB::table('customers')->whereIn('customer_id', [$id])->delete();
+        echo $id;
+    }
 
 }

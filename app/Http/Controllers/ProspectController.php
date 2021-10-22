@@ -59,18 +59,11 @@ class ProspectController extends Controller
             'message' => 'field customer id is repetitious'
         ]);
     }
-
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param int $id
-     * @return Response
-     */
-//    public function edit(int $id): Response
-//    {
-//        //
-//    }
+    public function destroy($id)
+    {
+        DB::table('prospects')->whereIn('prospect_id', [$id])->delete();
+        echo $id;
+    }
 
 
 }

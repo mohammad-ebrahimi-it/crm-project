@@ -26,6 +26,10 @@ Route::post('prospect/store', 'ProspectController@store');
 Route::post('empPros/store', 'EmployeeProspectController@store');
 Route::post('cusEmp/store', 'CustomerEmployeeController@store');
 
+Route::get('employee/delete/{id}', 'EmployeeController@destroy');
+Route::get('prospect/delete/{id}', 'ProspectController@destroy');
+Route::get('customer/delete/{id}', 'ProspectController@destroy');
+
 
 Route::get('empPros/get', 'EmployeeProspectController@index');
 Route::get('cusEmp/get', 'CustomerEmployeeController@index');

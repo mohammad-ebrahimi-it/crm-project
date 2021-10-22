@@ -24,7 +24,10 @@
         "vue-template-compiler": "^2.6.10"
     },
     "dependencies": {
+        "sweetalert": "^2.1.2",
         "v-switch-case": "^1.0.3",
-        "vue-router": "^3.5.2"
+        "vue-router": "^3.5.2",
+        "vue-swal": "^1.0.0",
+        "vue-sweetalert2": "^5.0.2"
     }
 }

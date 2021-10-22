@@ -45,6 +45,10 @@
                                                     aria-label="Start date: activate to sort column ascending"
                                                     class="sorting" style="width: 118.317px;">Phone Number
                                                 </th>
+                                                <th tabindex="0" aria-controls="dataTableHover" rowspan="1" colspan="1"
+                                                    aria-label="Start date: activate to sort column ascending"
+                                                    class="sorting" style="width: 118.317px;">delete
+                                                </th>
 
                                             </tr>
                                             </thead>
@@ -55,18 +59,26 @@
                                                 <th rowspan="1" colspan="1">Address Number</th>
                                                 <th rowspan="1" colspan="1">Address street</th>
                                                 <th rowspan="1" colspan="1">Phone Number</th>
+                                                <th rowspan="1" colspan="1">delete</th>
 
                                             </tr>
                                             </tfoot>
                                             <tbody>
 
                                             <tr role="row" class="odd" v-for="customer in customers"
-                                                :key="customer.customer_id">
+                                                :key="customer.customer_id"
+                                                v-bind:data-id="customer.customer_id"
+                                            >
                                                 <td class="sorting_1">{{ customer.customer_id }}</td>
                                                 <td>{{ customer.cus_name }}</td>
                                                 <td>{{ customer.address_number }}</td>
                                                 <td>{{ customer.address_street }}</td>
                                                 <td>{{ customer.phone_number }}</td>
+                                                <td>
+                                                    <a href="#" class="btn btn-danger delete" v-on:click="deleteCus">
+                                                        <i class="fas fa-trash"></i>
+                                                    </a>
+                                                </td>
                                             </tr>
 
                                             </tbody>
@@ -117,6 +129,31 @@ export default {
         refreshCustomer() {
             window.location.reload();
 
+        },
+        deleteCus(){
+            swal({
+                title: "warning!",
+                text: "Are you sure delete item?",
+                icon: "warning",
+                buttons: ["no", "yes"],
+                dangerMode: true,
+
+            })
+                .then((willDelete) => {
+                    if (willDelete) {
+                        $.ajax({
+                            url: `customer/delete/${$("a.delete").parent().parent().attr("data-id")}`,
+                            method: "get",
+                            success: function (response_id) {
+                                $(`tr[data-id=${response_id}]`).remove();
+                            }
+                        });
+                        swal("successfully ! your item is deleted", {
+                            icon: "success",
+                            buttons: "ok"
+                        });
+                    }
+                })
         }
     }
 }
