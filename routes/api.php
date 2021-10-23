@@ -2,7 +2,6 @@
 
 use App\Customers;
 use App\Employees;
-use App\Prospects;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -29,7 +28,3 @@ Route::get('/get/employees', function () {
     return Employees::all();
 });
 
-Route::get('/get/prospect', function () {
-    $a = new Customers();
-    return Prospects::all() . $a->cus_name;
-});

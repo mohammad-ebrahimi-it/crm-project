@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,11 +14,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+Route::middleware('auth')->get('/', function () {
     return view('panel');
 });
-//middleware('auth')->
+Route::middleware('auth')->get('/home', function () {
+    return view('home');
+});
+//
 Auth::routes();
+
+Route::middleware('auth')->group(function (){
+
 
 
 Route::post('customer/store', 'CustomerController@store');
@@ -36,3 +43,4 @@ Route::get('cusEmp/get', 'CustomerEmployeeController@index');
 
 Route::get('prospect/get', 'ProspectController@index');
 
+});
