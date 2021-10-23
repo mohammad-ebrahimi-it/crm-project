@@ -2,6 +2,7 @@
 
 use App\Customers;
 use App\Employees;
+use App\Prospects;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -26,5 +27,9 @@ Route::get('/get/customers', function () {
 
 Route::get('/get/employees', function () {
     return Employees::all();
+});
+
+Route::get('/get/prospect', function () {
+    return Prospects::all();
 });
 
